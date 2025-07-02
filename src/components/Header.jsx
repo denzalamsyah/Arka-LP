@@ -31,12 +31,12 @@ export default function Header() {
 
   return (
     <nav
-      className={`fixed w-full z-10 bg-white/80 py-4 px-6 lg:px-16 ${
+      className={`fixed w-full z-10 bg-white/80 py-2 px-6 lg:px-16 ${
         scrolled ? "backdrop-blur shadow" : ""
       }`}
     >
-      <div className="mx-auto flex justify-between items-center">
-        <img src="arka.svg" alt="Logo" className="h-10" />
+      <div className="mx-auto md:gap-5 flex justify-between items-center md:border md:border-gray-600 md:rounded-full md:max-w-[600px] md:justify-center">
+        <img src="arka.svg" alt="Logo" className="h-14" />
         <div className="hidden md:flex items-center space-x-10">
           <a
             href="#home"
@@ -57,7 +57,7 @@ export default function Header() {
             Testimonials
           </a>
 
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition">
+          <button className="bg-none border hover:border-none border-gray-900 hover:bg-gradient-to-r w-auto from-blue-600 to-purple-600 hover:text-white  text-gray-900 font-bold px-6 py-1 rounded-lg transition">
             Login
           </button>
         </div>
@@ -70,7 +70,7 @@ export default function Header() {
           </i>
         </button>
         {showMenu && (
-          <div className="absolute h-screen top-0 left-0 w-full h-full bg-gray-800 bg-opacity-95 z-30 flex flex-col items-center justify-center space-y-6 text-white">
+          <div className="absolute h-screen top-0 left-0 w-full bg-blue-800 bg-opacity-95 z-30 flex flex-col items-center justify-center space-y-6 text-white">
             <button
               className="absolute top-5 right-5 text-3xl text-white"
               onClick={() => setShowMenu(false)}

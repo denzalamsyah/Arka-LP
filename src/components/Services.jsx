@@ -3,6 +3,7 @@ import { IoPrintSharp, IoBusinessSharp } from "react-icons/io5";
 import { SiCssdesignawards } from "react-icons/si";
 import { FaMagento } from "react-icons/fa";
 import { LiaNetworkWiredSolid } from "react-icons/lia";
+import { useEffect, useState } from "react";
 
 const services = [
   {
@@ -50,6 +51,15 @@ const services = [
 ];
 
 export default function Services() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section
       id="services"
@@ -70,7 +80,9 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`bg-white p-8 rounded-xl shadow-md transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl ${service.anim}`}
+              className={`bg-white p-8 rounded-xl shadow-md transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl ${
+                service.anim
+              } ${scrolled ? "transition-transform duration-500" : ""}`}
             >
               <div
                 className={`w-14 h-14 ${service.bg} rounded-lg flex items-center justify-center mb-6`}

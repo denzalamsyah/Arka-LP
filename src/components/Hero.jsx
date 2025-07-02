@@ -38,7 +38,7 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition shadow-md"
+            className="bg-gradient-to-r w-auto from-blue-600 to-purple-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition shadow-md"
           >
             Kenali Kami
           </motion.button>
@@ -61,7 +61,7 @@ export default function Hero() {
           <img
             src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cfa68672-348f-4a96-8225-932a09c1bd26.png"
             alt="Tim Arka"
-            className="rounded-xl shadow-2xl object-cover w-full max-w-md transition-transform duration-500"
+            className="rounded-lg object-cover w-full max-w-md transition-transform duration-500"
             style={{
               transformStyle: "preserve-3d",
             }}
