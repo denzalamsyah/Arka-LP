@@ -38,7 +38,7 @@ export default function ImageCarousel() {
   ];
 
   return (
-    <section className="w-full">
+    <section className="relative z-0 w-full">
       <Swiper
         modules={[Autoplay, Pagination]}
         slidesPerView={1}

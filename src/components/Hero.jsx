@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="px-6 py-20 md:py-28 flex flex-col-reverse lg:flex-row gap-10 justify-center items-center overflow-x-hidden"
+      className="px-6 py-20 pt-28 md:py-28 flex flex-col-reverse lg:flex-row gap-10 justify-center items-center overflow-x-hidden"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}

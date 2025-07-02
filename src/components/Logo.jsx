@@ -6,11 +6,11 @@ import { logos } from "../assets/index";
 
 export default function LogoCarousel() {
   return (
-    <section className="py-12 md:pb-16 bg-white">
+    <section className="relative py-12 md:pb-16 bg-white z-0">
+      <h2 className="text-2xl p-4 bg-gradient-to-r from-blue-600 to-purple-600 md:bg-none md:text-3xl font-bold text-center mb-20 md:mb-32 text-white sm:text-gray-900">
+        Dipercaya oleh Perusahaan Terkemuka
+      </h2>
       <div className="mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-20 md:mb-32 text-gray-800">
-          Dipercaya oleh Perusahaan Terkemuka
-        </h2>
         <Swiper
           modules={[Autoplay, Pagination]}
           slidesPerView={2}

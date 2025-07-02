@@ -1,7 +1,25 @@
 import { useState, useEffect } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import MobileMenu from "./MobileMenu";
+import { MdCancel } from "react-icons/md";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const menu = [
+    {
+      name: "About",
+      id: "#home",
+    },
+    {
+      name: "Services",
+      id: "#services",
+    },
+    {
+      name: "Testimonials",
+      id: "#testimonials",
+    },
+  ];
 
   useEffect(() => {
     const onScroll = () => {
@@ -45,12 +63,34 @@ export default function Header() {
         </div>
         <button
           className="md:hidden text-gray-700 text-2xl"
-          onClick={() =>
-            document.querySelector(".mobile-menu").classList.remove("hidden")
-          }
+          onClick={() => setShowMenu(!showMenu)}
         >
-          <i className="fas fa-bars"></i>
+          <i className="fas fa-bars">
+            <GiHamburgerMenu />
+          </i>
         </button>
+        {showMenu && (
+          <div className="absolute h-screen top-0 left-0 w-full h-full bg-gray-800 bg-opacity-95 z-30 flex flex-col items-center justify-center space-y-6 text-white">
+            <button
+              className="absolute top-5 right-5 text-3xl text-white"
+              onClick={() => setShowMenu(false)}
+            >
+              <MdCancel />
+            </button>
+            <h2 className="text-2xl font-semibold mb-6">My Menus</h2>
+
+            {/* Menu items */}
+            {menu.map((item, index) => (
+              <MobileMenu
+                key={index}
+                name={item.name}
+                Id={item.id}
+                toggle={!showMenu}
+                onClick={() => setShowMenu(false)}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </nav>
   );
