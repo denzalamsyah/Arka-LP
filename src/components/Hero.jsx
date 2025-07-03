@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="px-6 py-20 pt-28 md:py-28 flex flex-col-reverse lg:flex-row gap-10 justify-center items-center overflow-x-hidden"
+      className="px-6 py-16 pt-28 md:py-32 flex flex-col-reverse lg:flex-row gap-10 justify-center items-center overflow-x-hidden"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -61,7 +61,7 @@ export default function Hero() {
           <img
             src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cfa68672-348f-4a96-8225-932a09c1bd26.png"
             alt="Tim Arka"
-            className="rounded-lg object-cover w-full max-w-md transition-transform duration-500"
+            className="rounded-lg object-cover w-full max-w-md md:max-w-sm transition-transform duration-500"
             style={{
               transformStyle: "preserve-3d",
             }}

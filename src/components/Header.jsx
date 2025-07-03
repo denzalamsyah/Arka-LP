@@ -31,11 +31,11 @@ export default function Header() {
 
   return (
     <nav
-      className={`fixed w-full z-10 bg-white/80 py-2 px-6 lg:px-16 ${
+      className={`fixed w-full z-10 bg-white/80 py-4 px-6 lg:px-16 ${
         scrolled ? "backdrop-blur shadow" : ""
       }`}
     >
-      <div className="mx-auto md:gap-5 flex justify-between items-center md:border md:border-gray-600 md:rounded-full md:max-w-[600px] md:justify-center">
+      <div className="mx-auto md:gap-5 flex justify-between items-center md:border md:border-gray-300 md:rounded-full md:max-w-[600px] md:justify-center">
         <img src="arka.svg" alt="Logo" className="h-14" />
         <div className="hidden md:flex items-center space-x-10">
           <a
@@ -57,7 +57,7 @@ export default function Header() {
             Testimonials
           </a>
 
-          <button className="bg-none border hover:border-none border-gray-900 hover:bg-gradient-to-r w-auto from-blue-600 to-purple-600 hover:text-white  text-gray-900 font-bold px-6 py-1 rounded-lg transition">
+          <button className="bg-none border border-gray-300 hover:border-blue-400 hover:bg-gradient-to-r w-auto from-blue-600 to-purple-600 hover:text-white  text-gray-900 font-bold px-6 py-1 rounded-lg transition">
             Login
           </button>
         </div>
